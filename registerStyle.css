@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #333333;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+#registerForm {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+#registerForm::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #4285F4, #34A853, #FBBC05, #EA4335);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555555;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #4285F4;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3b78e7;
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.error {
+    color: #e53935;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.policy-agreement {
+    display: flex;
+    align-items: flex-start;
+    margin: 5px 0 20px;
+}
+
+.policy-agreement input[type="checkbox"] {
+    margin-right: 8px;
+    margin-top: 3px;
+    accent-color: #4285F4;
+    width: 16px;
+    height: 16px;
+}
+
+.policy-agreement label {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #4285F4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-footer a:hover {
+    color: #3b78e7;
+    text-decoration: underline;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #888;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.separator::before {
+    margin-right: 15px;
+}
+
+.separator::after {
+    margin-left: 15px;
+}
+
+/* Remove the default <br> spacing from the form */
+br {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #registerForm {
+        padding: 30px 20px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
